@@ -4,7 +4,7 @@ import { generateToken } from "../utils/generateToken";
 
 
 export interface LoginServiceInterface {
-    login(email: string, password: string): string | boolean;
+    login(email: string, password: string): string;
 }
 
 
@@ -16,13 +16,13 @@ export class LoginService implements LoginServiceInterface {
         this.repository = repository;
     }
 
-    login = (email: string, password: string): string | boolean  => {
+    login = (email: string, password: string): string  => {
 
         const users: UserDTO[] = this.repository.getUsers().users;
         const user = users.find(user => user.email === email && user.password === password);
 
         if(!user) {
-            return false;
+            return "";
         }
 
         const token = generateToken(user);

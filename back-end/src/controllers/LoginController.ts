@@ -22,14 +22,15 @@ export class LoginController {
         try {
             const token = this.service.login(req.body.email, req.body.password);
 
-            if (token === false) {
+            if (token.length === 0) {
                 return res.status(400).send({ message: "Email or Password is incorrect" })
             }
-
-            return res.status(200).send({token});
+            res.header('authorization-token', token);
+            res.status(200).send({message: "Usuario logado com sucesso!"});
 
         } catch(error) {
             console.log(error)
+            
             res.status(500).send({ error: "Erro interno no servidor"})
         }
     }
