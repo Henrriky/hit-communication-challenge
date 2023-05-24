@@ -1,5 +1,4 @@
-import { TicketDTO } from "../DTO/TicketDTO";
-import { TicketListDTO } from "../DTO/TicketListDTO";
+import { TicketDTO } from "../DTO/Tickets/TicketDTO";
 import { TicketRepositoryInterface } from "../repository/TicketRepository";
 
 export interface TicketServiceInterface {

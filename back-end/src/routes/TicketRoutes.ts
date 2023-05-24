@@ -1,4 +1,4 @@
-import express, {Request, Response} from "express";
+import express from "express";
 import { TicketService } from "../services/TicketService"
 import { TicketRepository } from "../repository/TicketRepository";
 import { TicketController } from "../controllers/TicketController";

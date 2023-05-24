@@ -1,4 +1,4 @@
-import { TicketListDTO } from "../DTO/TicketListDTO";
+import { TicketListDTO } from "../DTO/Tickets/TicketListDTO";
 import data from "../data/data.json"
 
 export interface TicketRepositoryInterface {

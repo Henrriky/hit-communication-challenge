@@ -1,7 +1,22 @@
 {
-    "usuarios": [
-        { //Usuario
-            
+    "users": [
+        {
+            "id": 1,
+            "name": "Sheila",
+            "email": "sheila@example.com",
+            "password": "123456"
+        },
+        {
+            "id": 2,
+            "name": "admin",
+            "email": "admin@example.com",
+            "password": "admin"
+        },
+        {
+            "id": 3,
+            "name": "Arthur",
+            "email": "joao@example.com",
+            "password": "8171628"
         }
     ]
 }

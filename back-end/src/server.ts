@@ -1,9 +1,16 @@
 import express from "express";
-import { router } from "./routes/TicketRoutes"; 
+import bodyParser from 'body-parser';
+import { router as ticketRoutes } from "./routes/TicketRoutes"; 
+import { router as loginRoutes } from "./routes/LoginRoutes"; 
 
 const app = express();
 
-app.use("/calls", router)
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use("/calls", ticketRoutes)
+app.use("/auth/", loginRoutes)
 
 
 app.listen(3000, () => {
