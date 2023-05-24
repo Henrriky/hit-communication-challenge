@@ -1,5 +1,7 @@
-export interface TicketDTO {
+import { Contact } from "./IContact";
+import { Queue } from "./IQueue";
 
+export interface TicketDTO {
     id: Number,
     status: String,
     unreadMessages: Number,
@@ -12,7 +14,7 @@ export interface TicketDTO {
     queueId: Number,
     createdAt: String,
     updatedAt: String,
-    contact: Object,
-    queue: Object,
+    contact: Contact,
+    queue: Queue,
 
 }
