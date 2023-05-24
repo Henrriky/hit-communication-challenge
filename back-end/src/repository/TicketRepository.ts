@@ -1,10 +1,9 @@
-import { tickets } from "../data/data.json"
+import { TicketListDTO } from "../DTO/TicketListDTO";
+import data from "../data/data.json"
 
 export interface TicketRepositoryInterface {
 
-    getAllTickets(): {
-
-    }
+    getAllTickets(): TicketListDTO
 
 }
 
@@ -14,8 +13,12 @@ export class TicketRepository implements TicketRepositoryInterface {
 
     }
 
-    getAllTickets = () => {
-        return tickets;
+    getAllTickets = (): TicketListDTO => {
+
+        const ticketsJSON = JSON.stringify(data);
+        const ticketsMapping: TicketListDTO = JSON.parse(ticketsJSON);
+
+        return ticketsMapping;
     }
 
 }

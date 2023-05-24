@@ -1,15 +1,13 @@
+import { TicketDTO } from "../DTO/TicketDTO";
+import { TicketListDTO } from "../DTO/TicketListDTO";
 import { TicketRepositoryInterface } from "../repository/TicketRepository";
 
 export interface TicketServiceInterface {
-    
-    getAllTickets(): {
-
-    }
-
+    getAllTickets(): TicketDTO[];
 }
 
 
-export class TicketService implements TicketService {
+export class TicketService implements TicketServiceInterface {
 
     private repository: TicketRepositoryInterface;
 
@@ -17,9 +15,10 @@ export class TicketService implements TicketService {
         this.repository = repository;
     }
 
-    getAllTickets = () => {
+    getAllTickets = (): TicketDTO[]  => {
 
-        return this.repository.getAllTickets()
+        const tickets: TicketDTO[] = this.repository.getAllTickets().tickets;
+        return tickets;
 
     }
 

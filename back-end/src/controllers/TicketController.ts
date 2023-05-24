@@ -1,5 +1,7 @@
 import { Request, Response } from "express"
 import { TicketServiceInterface } from "../services/TicketService";
+import { TicketDTO } from "../DTO/TicketDTO";
+
 
 export class TicketController {
 
@@ -9,7 +11,18 @@ export class TicketController {
         this.service = service;
     }
 
-    getAllTickets = async (req: Request, res: Response): Promise<void> => {
-        res.send(await this.service.getAllTickets());
+    getAllTickets = (req: Request, res: Response) => {
+        try {
+            const tickets: TicketDTO[] = this.service.getAllTickets();
+            console.log(tickets.length);
+
+            if(tickets.length === 0) {
+                res.send(200).send("Sem tickets")
+            }
+
+            res.status(200).send(tickets);
+        } catch(error) {
+            res.status(500).send({ error: "Erro interno no servidor"})
+        }
     }
 }
