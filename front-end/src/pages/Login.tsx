@@ -1,16 +1,11 @@
-import Logo from '../assets/logo.png';
 import Form from '../components/Form';
-
+import Header from '../components/Header';
 
 function Login() {
 
   return (
     <div className="bg-background-color min-h-screen flex flex-col items-center justify-center">
-        <header className="max-w-[340px] text-center flex flex-col items-center gap-1">
-            <img src={Logo} className="max-w-[220px] max-w-[192px] inline-block"/>
-            <h1 className="text-login-title-gray text-3xl font-bold">SCCANC SAC</h1>
-            <h2 className="text-login-subtitle-gray font-medium text-lg">Faça login e gerencie seus atendimentos</h2>
-        </header>
+        <Header/>
         <Form/>
     </div>
   )

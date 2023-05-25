@@ -1,11 +1,11 @@
 import './App.css';
-import Login from './pages/Login';
+import Calls from './pages/Calls';
 
 
 function App() {
   return (
     <div className="App font-font-kumb">
-      <Login/>
+      <Calls/>
     </div>
   );
 }

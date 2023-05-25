@@ -38,7 +38,7 @@ function Form() {
             </div>
           </label>
           <Button>Entrar na plataforma</Button>
-        </form>
+    </form>
   )
 }
 
