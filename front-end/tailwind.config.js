@@ -18,9 +18,9 @@ module.exports = {
         'status-pending-checked': 'rgba(233, 219, 94)',
         'status-closed-unchecked': 'rgba(255, 62, 62, 0.3)',
         'status-closed-checked': 'rgba(255, 62, 62)',
-
-        'card-title-color': '#CACACA',
+        
         'card-subtitle-color': '#8A8A8A',
+        'card-background-color': '#333131',
         'button-background-color': '#81D8F7',
         'background-color': '#121214',
       },

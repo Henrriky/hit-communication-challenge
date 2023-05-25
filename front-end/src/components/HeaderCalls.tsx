@@ -6,8 +6,7 @@ import { Button } from './Button'
 
 function HeaderCalls() {
     return (
-        <div className="min-h-screen bg-transparent flex max-w-[1440px] mx-auto border-l-2 border-l-login-subtitle-gray border-opacity-20">
-            <header className="flex flex-col p-8 border-r-2 border-r-login-subtitle-gray border-opacity-20 items-center">
+            <header className="flex flex-col p-8 border-r-2 border-r-login-subtitle-gray border-opacity-20 items-center pt-[74px]">
                 <h2 className="text-dashboard-title-white max-w-[209px] mb-7 text-[32px]">Olá, Henrriky</h2>
                 <h3 className="font-semibold text-base text-dashboard-subtitle-gray max-w-[167px] text-center mb-14 inline-block">Confira a situação dos atendimentos abaixo:</h3>
                 <nav className="flex flex-col gap-4 items-center">
@@ -36,7 +35,6 @@ function HeaderCalls() {
                     Sair da plataforma
                 </Button>
             </header>
-        </div>
     )
 }
 

@@ -1,0 +1,3 @@
+.grid-template-columns-540 {
+    grid-template-columns: repeat(2, 540px);
+}
