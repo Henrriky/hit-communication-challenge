@@ -1,13 +1,24 @@
 import { api } from "./api"
 
-export const getCalls = async (email: String, password: String) => {
+export const getCalls = async (token: String) => {
 
-    const callsResponse = await api.post('/auth/calls', {
-        email,
-        password,
-    })
+    let toStringToken = token.toString();
 
-    const { token } = callsResponse.data;
+    const headers = {
+        'authorization-token': toStringToken,
+    }
 
-    return token
+    const response = await api.get('/calls/tickets', { 
+                                        headers 
+                                    })
+                                    .then(response => response)
+                                    .catch(error => error.response);
+
+    const { data, status } = await response;
+
+    if(status !== 200) {
+        return [{ticket: "Não foi possível encontrar tickets"}];
+    }   
+
+    return data;
 }
