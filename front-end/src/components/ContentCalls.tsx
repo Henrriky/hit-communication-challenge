@@ -41,7 +41,7 @@ function ContentCalls(props: ContentCallProps) {
                     <span className="font-semibold text-card-subtitle-color">   {ticket.lastMessage}</span>
                   </label>
                 </div>
-                <div className="h-full flex flex-col border-l-2 border-background-color px-3 py-10 gap-2">
+                <div className="h-full flex flex-col border-l-2 border-background-color px-3 gap-2 justify-center">
                   <div className="text-card-subtitle-color text-[14px] flex justify-center text-center mb-1">
                     <DateIcon />
                     Datas
