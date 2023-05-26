@@ -6,3 +6,5 @@
   - Abra a pasta back-end e digite `npm i` e depois `npm run start:dev` para iniciar o servidor back-end
   - Abra a pasta do front-end e digite `npm i` e depois `npm run dev` para iniciar o servidor front-end
   - Agora é só logar e ver os atendimentos separados por estado deles : )
+
+- **Versão do NODE: v18.16.0**
