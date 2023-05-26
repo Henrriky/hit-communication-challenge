@@ -23,10 +23,9 @@ export class LoginController {
             const token = this.service.login(req.body.email, req.body.password);
 
             if (token.length === 0) {
-                return res.status(400).send({ message: "Email or Password is incorrect" })
+                return res.status(404).send({ message: "Email or Password is incorrect" })
             }
-            res.header('authorization-token', token);
-            res.status(200).send({message: "Usuario logado com sucesso!"});
+            res.status(200).send({message: "Usuario logado com sucesso!", authorizationToken: token});
 
         } catch(error) {
             console.log(error)

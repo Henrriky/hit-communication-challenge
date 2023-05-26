@@ -3,8 +3,13 @@ import { ReactComponent as Open } from '../assets/open.svg'
 import { ReactComponent as Pending } from '../assets/pending.svg'
 import { ReactComponent as Close } from '../assets/close.svg'
 import { Button } from './Button'
+import { useContext } from 'react'
+import { AuthContext } from '../contexts/AuthContext'
 
 function HeaderCalls() {
+
+    const { token, setToken } = useContext(AuthContext);
+
     return (
             <header className="flex flex-col p-8 border-r-2 border-r-login-subtitle-gray border-opacity-20 items-center pt-[74px]">
                 <h2 className="text-dashboard-title-white max-w-[209px] mb-7 text-[32px]">Olá, Henrriky</h2>
@@ -30,7 +35,11 @@ function HeaderCalls() {
                         Fechado
                     </a>
                 </nav>
-                <Button className="flex gap-2 mt-auto">
+                <Button className="flex gap-2 mt-auto" 
+                    onClick={() => { 
+                                setToken("");
+                                localStorage.removeItem("token");
+                            }}>
                     <img src={Exit} />
                     Sair da plataforma
                 </Button>
