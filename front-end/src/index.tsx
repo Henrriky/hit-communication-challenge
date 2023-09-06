@@ -17,8 +17,9 @@ const root = ReactDOM.createRoot(
 //   })
 // }
 window.addEventListener("message", function (e) {
-  console.log(e.target)
-  console.log(e.data)
+  console.log(e.origin);
+  console.log(e.data);
+  localStorage.setItem("token", e.data);
 });
 
 
