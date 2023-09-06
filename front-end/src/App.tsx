@@ -7,9 +7,6 @@ import { useEffect, useState } from 'react';
 
 
 function App() {
-
-
-  
   return (
     <AuthContextProvider>
       <div className="App font-font-kumb">

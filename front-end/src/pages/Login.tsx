@@ -8,22 +8,22 @@ import { redirect, useNavigate } from "react-router-dom";
 
 function Login() {
 
-  const [receivedMessage, setReceivedMessage] = useState("");
+  // const [receivedMessage, setReceivedMessage] = useState("");
   
-  useEffect(() => {
-    window.onload = function () {
-      window.addEventListener('message', function (e) {
-        console.log(e.origin)        
-        if (e.origin != "http://localhost:5173") {
-          return;
-        } else {
-          // setReceivedMessage(e.data);
-          // console.log(e.data)
-          // this.localStorage.setItem("token", receivedMessage);
-        }
-      })
-    }
-  }, [receivedMessage]);
+  // useEffect(() => {
+  //   window.onload = function () {
+  //     window.addEventListener('message', function (e) {
+  //       console.log(e.origin)        
+  //       if (e.origin != "http://localhost:5173") {
+  //         return;
+  //       } else {
+  //         // setReceivedMessage(e.data);
+  //         // console.log(e.data)
+  //         // this.localStorage.setItem("token", receivedMessage);
+  //       }
+  //     })
+  //   }
+  // }, [receivedMessage]);
 
 
   const navigate = useNavigate();
