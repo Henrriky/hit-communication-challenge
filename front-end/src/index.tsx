@@ -8,6 +8,17 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
+// window.onload = function () {
+//   window.addEventListener('message', function (e) {
+//     if (e.origin != "http://localhost:5173") {
+//       return;
+//     }
+//     console.log(e);
+//   })
+// }
+
+
+
 root.render(
   <React.StrictMode>
     <App />

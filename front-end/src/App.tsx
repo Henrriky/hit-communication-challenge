@@ -11,11 +11,17 @@ function App() {
   const [receivedMessage, setReceivedMessage] = useState("");
   
   useEffect(() => {
-    window.addEventListener('message', function (e) {
-      setReceivedMessage(e.data);
-      console.log(e.data)
-      this.localStorage.setItem("token", receivedMessage);
-    })
+    window.onload = function () {
+      window.addEventListener('message', function (e) {
+        if (e.origin != "http://localhost:5173") {
+          return;
+        } else {
+          setReceivedMessage(e.data);
+          console.log(e.data)
+          this.localStorage.setItem("token", receivedMessage);
+        }
+      })
+    }
   }, [receivedMessage]);
   
   return (
