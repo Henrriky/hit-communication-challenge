@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:prod": "node --watch build/server.js",
     "start:dev": "nodemon",
     "build": "npx tsc"
   },
