@@ -16,7 +16,9 @@ const root = ReactDOM.createRoot(
 //     console.log(e);
 //   })
 // }
-
+window.addEventListener("message", () => {
+  console.log("oi"); 
+});
 
 
 root.render(

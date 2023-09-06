@@ -8,22 +8,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
-  const [receivedMessage, setReceivedMessage] = useState("");
-  
-  useEffect(() => {
-    window.onload = function () {
-      window.addEventListener('message', function (e) {
-        console.log(e.origin)
-        if (e.origin != "http://localhost:5173") {
-          return;
-        } else {
-          setReceivedMessage(e.data);
-          console.log(e.data)
-          this.localStorage.setItem("token", receivedMessage);
-        }
-      })
-    }
-  }, [receivedMessage]);
+
   
   return (
     <AuthContextProvider>
