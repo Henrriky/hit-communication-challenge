@@ -4,3 +4,5 @@
     "ignore": [],
     "exec": "ts-node ./src/server.ts"
 }
+
+    // "build": "npx tsc"
