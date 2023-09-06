@@ -13,6 +13,7 @@ function App() {
   useEffect(() => {
     window.onload = function () {
       window.addEventListener('message', function (e) {
+        console.log(e.origin)
         if (e.origin != "http://localhost:5173") {
           return;
         } else {
