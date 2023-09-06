@@ -8,7 +8,6 @@ interface PrivateRouteProps {
   element: JSX.Element
 }
 
-
 function PrivateRoute({ element }: PrivateRouteProps) {
 
 

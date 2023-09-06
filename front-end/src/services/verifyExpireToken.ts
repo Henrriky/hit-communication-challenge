@@ -24,5 +24,4 @@ export const verifyExpireToken = () => {
     }
 
     return true;
-    
 }
