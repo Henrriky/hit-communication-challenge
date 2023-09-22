@@ -21,7 +21,7 @@ function ContentCalls(props: ContentCallProps) {
         {
           props.values.map(ticket => {
             return (
-              <div className="bg-card-background-color flex gap-3 h-36 items-center rounded-[10px] max-w-[540px] px-3">
+              <div className="bg-card-background-color flex gap-3 h-36 items-center rounded-[10px] max-w-[540px] px-3" key={Math.random().toString(36).substring(7)}>
                 <img src={Photo} className="max-w-[50px] max-h-[50px]" />
                 <div className="flex flex-col max-w-[250px]">
                   <label className="font-bold text-dashboard-title-white text-xs">

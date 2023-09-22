@@ -17,13 +17,12 @@ function Login() {
   //       if (e.origin != "http://localhost:5173") {
   //         return;
   //       } else {
-  //         // setReceivedMessage(e.data);
-  //         // console.log(e.data)
-  //         // this.localStorage.setItem("token", receivedMessage);
+  //         console.log(e.data)
+  //         this.localStorage.setItem("token", e.data);
   //       }
   //     })
   //   }
-  // }, [receivedMessage]);
+  // }, []);
 
 
   const navigate = useNavigate();

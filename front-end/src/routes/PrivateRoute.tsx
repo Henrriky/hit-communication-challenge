@@ -23,7 +23,6 @@ function PrivateRoute({ element }: PrivateRouteProps) {
         }
         setToken(storageToken);
       }
-  
 
       if (tokenIsInvalid) {
           setToken("");
@@ -38,7 +37,7 @@ function PrivateRoute({ element }: PrivateRouteProps) {
   }
 
 
-  return isAuthenticated ? element : <NotAllowed />
+  return isAuthenticated ? element : <NotAllowed/>
 
 }
 

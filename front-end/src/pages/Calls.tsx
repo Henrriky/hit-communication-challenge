@@ -2,10 +2,7 @@ import { useEffect } from "react";
 import { verifyExpireToken } from '../services/verifyExpireToken';
 import { AuthContext } from '../contexts/AuthContext';
 import { useContext } from "react";
-import ContentCalls from '../components/ContentCalls'
-import HeaderCalls from '../components/HeaderCalls'
-import CallsContextProvider, { CallsContext } from "../contexts/CallsContext";
-import { getCalls } from "../services/getCalls";
+import CallsContextProvider from "../contexts/CallsContext";
 import CallsContent from "../components/CallsContent";
 
 
@@ -26,9 +23,7 @@ function Calls() {
             setToken(storageToken);
         }
 
-
         if (tokenIsInvalid) {
-            console.log("")
             setToken("");
             localStorage.setItem("token", "");
         }

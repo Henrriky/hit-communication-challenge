@@ -8,25 +8,25 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-// window.onload = function () {
-//   window.addEventListener('message', function (e) {
-//     if (e.origin != "http://localhost:5173") {
-//       return;
-//     }
-//     console.log(e);
-//   })
-// }
-window.addEventListener("message", function (e) {
-  console.log(e.origin);
-  console.log(e.data);
-  localStorage.setItem("token", e.data);
-});
+window.onload = function () {
+  window.addEventListener("message", function (e) {
+    if (e.origin == "http://localhost:5173") {
+      console.log(e.origin);
+      console.log(e.data);
+      if (typeof e.data == 'string') {
+        console.log("Eh token");
+        localStorage.setItem("token", e.data);
+      }
+    }
+  });
+}
+
 
 
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <App />
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 
